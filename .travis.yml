@@ -4,4 +4,4 @@ language: node_js
 before_install: -"export DISPLAY=:99.0"
   -"sh -e /tc/init.d/xvfb start"
 
-node_js: -"node"
+node_js: "node"
