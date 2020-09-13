@@ -1,8 +1,17 @@
 language: node_js
 
 # Configurações para exibição do navegador
-before_install:
-  - "export DISPLAY=:99.0"
-  - "sh -e /etc/init.d/xvfb start"
+services:
+  - xvfb
+before_script:
+  - export DISPLAY=:99.0
+install:
+  - npm set progress=false
+  - npm install
+script:
+  #- ng lint
+  - npm run test
+  #- npm run e2e
+  #- npm run build
 
 node_js: "node"
