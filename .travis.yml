@@ -1,7 +1,8 @@
 language: node_js
 
 # Configurações para exibição do navegador
-before_install: "export DISPLAY=:99.0"
-  "sh -e /etc/init.d/xvfb start"
+before_install:
+  - "export DISPLAY=:99.0"
+  - "sh -e /etc/init.d/xvfb start"
 
 node_js: "node"
